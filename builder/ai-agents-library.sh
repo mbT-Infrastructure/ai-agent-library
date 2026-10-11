@@ -36,8 +36,15 @@ VERSION="$(cat Version.txt)"
 cd "$PROJECT_DIR"
 mkdir --parents builds
 
-mkdir "${WORKING_DIR}/ai-agent-library"
-cp --recursive agents instructions prompts skills "${WORKING_DIR}/ai-agent-library"
+mkdir "${WORKING_DIR}/ai-agent-library/"
+for FILE in instructions/*; do
+    if [[ -s "${WORKING_DIR}/ai-agent-library/AGENTS.md" ]]; then
+        echo >> "${WORKING_DIR}/ai-agent-library/AGENTS.md"
+    fi
+    cat "$FILE" >> "${WORKING_DIR}/ai-agent-library/AGENTS.md"
+done
+cp --recursive agents prompts skills "${WORKING_DIR}/ai-agent-library"
+
 OUTPUT="builds/ai-agent-library-${VERSION}"
 if [[ -z "$(which "${COMPRESS_COMMAND[0]}")" ]]; then
     CONTAINER_NAME="$(basename "${PROJECT_DIR}")-builder-$(basename "$0")"
