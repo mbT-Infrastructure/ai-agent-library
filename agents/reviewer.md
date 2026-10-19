@@ -5,11 +5,26 @@ permissions:
     - action: edit
       resource: "*"
       effect: deny
+    - action: edit
+      resource: ".agent/**.md"
+      effect: allow
     - action: shell
       resource: "*"
       effect: deny
     - action: shell
       resource: "static-code-analysis.sh"
+      effect: allow
+    - action: shell
+      resource: "git status*"
+      effect: allow
+    - action: shell
+      resource: "git diff*"
+      effect: allow
+    - action: shell
+      resource: "git log*"
+      effect: allow
+    - action: shell
+      resource: "git ls-files*"
       effect: allow
 ---
 
