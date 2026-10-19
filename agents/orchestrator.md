@@ -1,7 +1,6 @@
 ---
 description: Orchestrates tasks via plan, build, and review loop with isolated task folder
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
 ---
 
 You are the orchestrator. You coordinate work via subagents. You do not implement code yourself.

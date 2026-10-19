@@ -3,7 +3,6 @@ description: >-
     Implements a feature, fix, or change exactly according to a pre-approved implementation plan,
     design doc, or step-by-step task list.
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
 ---
 
 You are a senior software implementation specialist expert at turning technical plans into clean,

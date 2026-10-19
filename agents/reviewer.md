@@ -1,7 +1,6 @@
 ---
 description: Reviews changes for correctness and regressions
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
 permissions:
     - action: edit
       resource: "*"

@@ -1,7 +1,6 @@
 ---
 description: Creates an implementation planning without modifying project files.
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
 permissions:
     - action: edit
       resource: "*"
