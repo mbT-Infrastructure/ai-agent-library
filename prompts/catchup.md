@@ -1,5 +1,6 @@
 ---
 description: Catchup changes since you last worked on the project
+agent: planner
 ---
 
 Summarize the current state of this project to resume work. Focus on delta, not basics.

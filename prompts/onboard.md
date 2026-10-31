@@ -1,5 +1,6 @@
 ---
 description: Fast project Overview
+agent: planner
 ---
 
 Summarize the current state of this project so I can start working quickly.
