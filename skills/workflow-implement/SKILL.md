@@ -15,9 +15,6 @@ Change project files through one writer and an independent review.
 - The user asks for a concrete change to code, config, docs, tests, or infrastructure.
 - The change has acceptance criteria that can be verified.
 
-Do not use for open-ended reviews, research, or defect discovery with no requested fix. Use
-`workflow-bug-hunt`, `workflow-review`, or `workflow-research` first.
-
 ## Roles
 
 - `planner`: explores and writes `plan.md`. Read-only.

@@ -1,5 +1,5 @@
 ---
-name: clarify-request
+name: clarify
 description: >-
     Interview the user until a shared understanding is reached.
 ---

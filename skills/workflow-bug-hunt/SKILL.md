@@ -14,9 +14,6 @@ Produce a ranked, evidence-backed list of defects. Do not fix them in this workf
 - The user asks to find bugs, audit a codebase, investigate a regression, or assess risk.
 - The output is a findings list, not a patch.
 
-If the user asks to fix the findings, run this workflow first and then `workflow-implement` with the
-approved subset.
-
 ## Artifacts
 
 - `findings.md`: merged, ranked findings.

@@ -14,8 +14,6 @@ Build an evidence-based explanation. Do not change code or present a guess as a 
 - The request is to understand, explain, trace, or diagnose.
 - The issue is not yet a confirmed defect and not primarily external research.
 
-If a defect becomes confirmed, hand it to `workflow-bug-hunt` or `workflow-implement`.
-
 ## Artifacts
 
 - `state.md`: hypotheses, evidence, and decisions.
@@ -41,8 +39,8 @@ If a defect becomes confirmed, hand it to `workflow-bug-hunt` or `workflow-imple
     - Separate what is proven from what remains probable.
 
 5. Report
-    - Write `report.md` with Question, Answer, Evidence, Confidence, What was ruled out,
-      Open questions, Recommended next step.
+    - Write `report.md` with Question, Answer, Evidence, Confidence, What was ruled out, Open
+      questions, Recommended next step.
 
 ## Gates
 

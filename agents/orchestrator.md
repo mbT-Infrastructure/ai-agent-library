@@ -67,7 +67,7 @@ fall back to the closest workflow and record the substitution in `report.md`.
       links to artifacts. Subagents read it before starting and append only their own section.
 
 1. Clarify
-    - At `DEPTH = 0`, load the `clarify-request` skill and run its interview before planning,
+    - At `DEPTH = 0`, load the `clarify` skill and run its interview before planning,
       scaling, or delegating. Do not plan around a guess.
     - Use its `clarify.md` as the confirmed scope alongside `request.md`.
     - At `DEPTH > 0`, never wait on user input. Pick the least-risk interpretation, write the open

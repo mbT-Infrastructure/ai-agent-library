@@ -2,7 +2,6 @@
 description: >-
     Finds and verifies defects with code evidence and reproduction steps without fixing them.
 mode: subagent
-steps: 40
 permissions:
     - action: edit
       resource: "*"

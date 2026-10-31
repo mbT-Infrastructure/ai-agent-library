@@ -14,9 +14,6 @@ Assess existing work without changing it. The output is a prioritized review, no
 - The user asks to review a diff, PR, module, architecture, or codebase.
 - The user wants a second opinion before merging or continuing.
 
-For a change that also needs fixes, finish the review and hand the approved findings to
-`workflow-implement`.
-
 ## Scope
 
 Accept one of:
