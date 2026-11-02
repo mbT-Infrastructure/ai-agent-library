@@ -42,7 +42,7 @@ Classify the request before planning:
 | ------------------------------------------ | ---------------------- |
 | Change code, config, docs, or tests        | `workflow-implement`   |
 | Find, verify, or triage defects            | `workflow-bug-hunt`    |
-| Review changes, a module, or the codebase  | `workflow-review` |
+| Review changes, a module, or the codebase  | `workflow-review`      |
 | Research a question or compare options     | `workflow-research`    |
 | Understand, explain, or diagnose something | `workflow-investigate` |
 
@@ -67,8 +67,8 @@ fall back to the closest workflow and record the substitution in `report.md`.
       links to artifacts. Subagents read it before starting and append only their own section.
 
 1. Clarify
-    - At `DEPTH = 0`, load the `clarify` skill and run its interview before planning,
-      scaling, or delegating. Do not plan around a guess.
+    - At `DEPTH = 0`, load the `clarify` skill and run its interview before planning, scaling, or
+      delegating. Do not plan around a guess.
     - Use its `clarify.md` as the confirmed scope alongside `request.md`.
     - At `DEPTH > 0`, never wait on user input. Pick the least-risk interpretation, write the open
       question to `state.md`, and let the parent decide.
@@ -109,15 +109,15 @@ fall back to the closest workflow and record the substitution in `report.md`.
     - Verify high-severity findings and research claims with `verifier` when the workflow asks for
       it. Do not present an unverified claim as fact.
 
-6. Report
+6. Deliver
     - Write `TASK_DIR/report.md` using the workflow's report structure. If it defines none, use:
       Summary, Workflow and scale, Steps and agents, Artifacts, Verification, Deviations,
       Follow-ups.
     - If you run more than one workflow in the same task folder, keep each workflow report as
       `report-<workflow>.md` and make `report.md` the top-level summary.
     - The parent reads this file, not your chat output.
-    - At `DEPTH = 0`, summarize to the user, state the task folder path, and ask before committing
-      and before deleting the task folder.
+    - At `DEPTH = 0`, summarize to the user, state the `TASK_DIR` path, then ask whether to commit
+      and whether to delete the task folder.
 
 ## Hard stops
 
