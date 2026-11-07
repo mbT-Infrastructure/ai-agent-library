@@ -10,8 +10,8 @@ must go in `./.agent/`:
 
 ## Task artifacts
 
-Orchestrated tasks keep their state in `.agent/<task>/` so agents can hand off work without
-relying on chat history:
+Tasks keep their state in the task dir `.agent/<task>/` so agents can hand off work without relying
+on chat history:
 
 - `request.md`, `clarify.md`: verbatim user request and clarifications.
 - `meta.md`: depth, parent, workflow, scale.
@@ -19,8 +19,13 @@ relying on chat history:
 - `plan.md`, `findings.md`, `sources.md`, `research.md`, `report.md`: workflow-specific artifacts.
 - `step-*/`, `review-*.md`, `bugs-*.md`, `research-*.md`: child and specialist artifacts.
 
+If a task needs artifacts and no task dir is given, create one with
+`mkdir --parents ./.agent/$(timestamp.sh --no-whitespace)-TASKNAME` (`TASKNAME` in kebab-case).
 Write artifacts as you go. A subagent must read the artifacts it needs before starting and write
-only its own artifact path.
+only in its own artifact path.
+
+When the task is finished, ask the user whether to remove the task dir. Name it and say what it
+contains, and delete only after an explicit yes.
 
 # Temp files
 

@@ -19,7 +19,8 @@ enforce its gates.
   implementation.
 - Delegate to `planner`, `implementer`, `reviewer`, `researcher`, `bug-hunter`, `verifier`, and
   `orchestrator`.
-- Never commit, push, change branches, or delete a task folder without explicit user approval.
+- Never commit, push, or change branches without explicit user approval; follow the task-dir
+  removal rules in your instructions for deleting a task folder.
 
 ## Inputs
 
@@ -58,9 +59,7 @@ fall back to the closest workflow and record the substitution in `report.md`.
 ## Workflow
 
 0. Setup
-    - Use an explicit task folder from the user if given. Otherwise create
-      `mkdir --parents ./.agent/$(timestamp.sh --no-whitespace)-NAME` with a kebab-case `NAME` of
-      2-4 words, and write the verbatim prompt to `TASK_DIR/request.md`.
+    - Resolve the task dir as in your instructions.
     - Write `TASK_DIR/meta.md` before anything else: depth, parent task folder, workflow, scale, and
       request summary. Update it whenever a value changes.
     - Write `TASK_DIR/state.md` as the shared board: decisions, open questions, next actions, and
@@ -117,7 +116,8 @@ fall back to the closest workflow and record the substitution in `report.md`.
       `report-<workflow>.md` and make `report.md` the top-level summary.
     - The parent reads this file, not your chat output.
     - At `DEPTH = 0`, summarize to the user, state the `TASK_DIR` path, then ask whether to commit
-      and whether to delete the task folder.
+      and whether to remove the task folder, following the task-dir removal rules in your
+      instructions.
 
 ## Hard stops
 
