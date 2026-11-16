@@ -8,10 +8,10 @@ for i in 1 2 3; do
   adb -s <serial> shell uiautomator dump /sdcard/ui.xml 2>/dev/null | grep -q "dumped to" && break
   sleep 1
 done
-adb -s <serial> shell cat /sdcard/ui.xml | <skill-dir>/scripts/parse_uidump.py
+adb -s <serial> shell cat /sdcard/ui.xml | <skill-dir>/scripts/ui.py parse
 ```
 
-Use `parse_uidump.py --clickable` when icon buttons have no text/desc, or `--all` to inspect every
+Use `ui.py parse --clickable` when icon buttons have no text/desc, or `--all` to inspect every
 node.
 
 Pass an explicit dump path and keep several snapshots (ui.xml, ui2.xml,

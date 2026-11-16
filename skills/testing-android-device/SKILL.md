@@ -28,10 +28,12 @@ read device state, capture evidence.
 4. Launch and drive the UI, Test and Verify
     - `adb -s <serial> shell am force-stop <pkg> &&`
       `adb -s <serial> shell am start -n <pkg>/.MainActivity` for a clean start
-    - `adb -s <serial> shell input tap <x> <y>`, `adb -s <serial> shell input keyevent 4` (back) for
-      interaction.
-    - Get element coordinates from `uiautomator dump`, parsed by `scripts/parse_uidump.py`. Use
-      `--clickable` for icon-only controls and `--all` for every node.
+    - `adb -s <serial> shell input keyevent 4` (back) to navigate.
+    - Find by label: `scripts/ui.py --serial <serial> find REGEX` lists the match. Tap and verify
+      in one call: `scripts/ui.py --serial <serial> tap REGEX` (dump, parse, tap, compare the
+      screen). Use `--clickable` for icon-only controls and `--all` for every node.
+    - Type into a field: `scripts/ui.py --serial <serial> type REGEX TEXT [--clear] [--enter]`
+      (taps the field, optionally clears it, types and verifies the text).
 5. Clean up
     - Delete temp files on the phone.
     - Close the app: `adb -s <serial> shell am force-stop <pkg>`
