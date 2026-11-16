@@ -1,6 +1,5 @@
 ---
 description: Do a retrospective on a agent session
-agent: orchestrator
 ---
 
 Let us do a retrospective. Please suggest improvements to the agent environment to improve future
